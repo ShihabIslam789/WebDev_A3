@@ -36,3 +36,15 @@ function addC() {
     }
 
 }
+//Remove a row
+function removeR() {
+        
+        let grid = document.getElementById("grid");
+
+       
+        grid.deleteRow(numRows-1);
+    
+        numRows--;
+    
+        
+    }
