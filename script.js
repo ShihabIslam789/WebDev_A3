@@ -17,10 +17,19 @@ function addR() {
 }
 //Add a column
 function addC() {
+   
     let grid = document.getElementById("grid");
-    let rows = document.querySelector("tr");
-    for (let i = 0; i < rows.length; i++) {
-        let selected_row = rows[i];
-        selected_row.insertCell(-1);
+    let everyRow = document.querySelectorAll("tr");
+    for(let i = 0; i < everyRow.length; i++)
+    {
+        let selectedRow = everyRow[i];
+
+        selectedRow.insertCell(0);
     }
+    if(everyRow.length < 1)
+    {
+        let newRow = grid.insertRow(0);
+        newRow.insertCell(0);
+    }
+
 }
