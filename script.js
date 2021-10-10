@@ -17,19 +17,22 @@ function addR() {
 }
 //Add a column
 function addC() {
-   
+   //first we need to access the elements of the grid  using DOM methods
     let grid = document.getElementById("grid");
+    //access to every row on the grid
     let everyRow = document.querySelectorAll("tr");
+
     for(let i = 0; i < everyRow.length; i++)
-    {
+    { //iterate through every row to add cells horizontially
+        // Fundamentally creates a new column each time
         let selectedRow = everyRow[i];
 
         selectedRow.insertCell(0);
     }
     if(everyRow.length < 1)
     {
-        let newRow = grid.insertRow(0);
-        newRow.insertCell(0);
+        let newcolumn = grid.insertRow(0);
+        newcolumn.insertCell(0);
     }
 
 }
