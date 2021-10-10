@@ -72,3 +72,8 @@ function removeC()
          }
      }
 }
+//press to color every space in the grid
+function fill() {
+    //Go through each open space in grid and color from what is selected.
+    document.querySelectorAll('td').forEach(td => td.style.backgroundColor = document.getElementById("selectedID").value);
+}
