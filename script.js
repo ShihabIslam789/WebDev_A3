@@ -38,13 +38,17 @@ function addC() {
 }
 //Remove a row
 function removeR() {
-        
+        // Access grid elements by DOM method
         let grid = document.getElementById("grid");
-
-       
+        // Delete the last inserted row 
         grid.deleteRow(numRows-1);
-    
+        // iterate integer number to track to continuously delete
+     if(numRows > 1){ 
         numRows--;
-    
+     }// reset counter, can't delete if negative itneger
+     else {
+         numCols = 0;
+         numRows = 0;
+     }
         
     }
