@@ -1,7 +1,3 @@
-let numRows = 0;
-let numCols = 0;
-let colorSelected;
-
 //Add a row
 function addR() {
     //First we obtain elements by DOM method
@@ -17,5 +13,14 @@ function addR() {
         for (let i = 0; i < number_columns; i++) {
             row.insertCell(0);
         }
+    }
+}
+//Add a column
+function addC() {
+    let grid = document.getElementById("grid");
+    let rows = document.querySelector("tr");
+    for (let i = 0; i < rows.length; i++) {
+        let selected_row = rows[i];
+        selected_row.insertCell(-1);
     }
 }
