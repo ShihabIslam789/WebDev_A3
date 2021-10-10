@@ -1,3 +1,7 @@
+let numRows = 0;
+let numCols = 0;
+let colorSelected;
+
 //Add a row
 function addR() {
     //First we obtain elements by DOM method
@@ -52,3 +56,19 @@ function removeR() {
      }
         
     }
+function removeC() 
+{
+    // Gets every row currently exsisting
+    let everyRow = document.querySelectorAll("tr");
+    //will go through each row and delete a column
+    for (let i = 0;  i < everyRow.length; i++) {
+
+        let selectedRow = everyRow[i];
+        selectedRow.deleteCell(0);
+    } //this line of code double checks the columns and deletes extra columns
+     if (everyRow[0].cells.length === 0){
+         for (let k = 0; k < everyRow.length; k++) {
+             document.getElementById("grid").deleteRow(0);
+         }
+     }
+}
