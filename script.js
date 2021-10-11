@@ -72,10 +72,24 @@ function removeC()
          }
      }
 }
+//sets global var for selected color from html file
 function selected() {
     
     colorSelected = document.getElementById("selectedID").value;
-    console.log(colorSelected);
+
+    //function created to force selected color is used
+    function clickChanger(color)
+    {
+        //looks at grid if it sees "td" conditions from css file
+        if(color.target.nodeName.toLowerCase() === "td")
+        {
+            // corrects the color
+            color.target.style.backgroundColor = colorSelected;
+        }
+    }
+
+    // obtains elements from grid to respond to function
+    document.getElementById("grid").addEventListener("click", clickChanger);    
 }
 //press to color every space in the grid
 function fill() {
