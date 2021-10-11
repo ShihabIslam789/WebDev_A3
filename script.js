@@ -72,6 +72,11 @@ function removeC()
          }
      }
 }
+function selected() {
+    
+    colorSelected = document.getElementById("selectedID").value;
+    console.log(colorSelected);
+}
 //press to color every space in the grid
 function fill() {
     //Go through each open space in grid and color from what is selected.
