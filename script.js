@@ -82,3 +82,14 @@ function clearAll() {
     //Easierst solution is to make everything white since that is the default
     document.querySelectorAll('td').forEach(td => td.style.backgroundColor = "white");
 }
+// the function will iterate through all grid spaces and replace no color or white 
+// with the selected color from selected function
+function fillU() {
+    document.querySelectorAll('td').forEach(function(td)
+    {
+        if(td.style.backgroundColor === "white" || td.style.backgroundColor === "")
+        {
+            td.style.backgroundColor = document.getElementById("selectedID").value;
+        }
+    });
+}
