@@ -77,3 +77,8 @@ function fill() {
     //Go through each open space in grid and color from what is selected.
     document.querySelectorAll('td').forEach(td => td.style.backgroundColor = document.getElementById("selectedID").value);
 }
+//button to wipe away all colors present
+function clearAll() {
+    //Easierst solution is to make everything white since that is the default
+    document.querySelectorAll('td').forEach(td => td.style.backgroundColor = "white");
+}
