@@ -15,4 +15,4 @@ The goals were of the following: <br>
 All members working on this Assignment: <br>
 Shihab Islam (Github: ShihabIslam789) <br>
 
-Website link: [https://shihabislam789.github.io/WebDev_A3/](GridCreator)
+Website link: (https://shihabislam789.github.io/WebDev_A3/)[GridCreator]
